@@ -1,15 +1,21 @@
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Human {
+    Integer id;
     String name;
     LocalDate birthDate, deathDate;
     List<Human> children = new ArrayList<>();
     Human father, mother;
     Gender gender;
     Human spouse;
+
+    public void setId(Integer id){
+        this.id = id;
+    }
 
     public void setName(String name){
         this.name = name;
@@ -40,6 +46,10 @@ public class Human {
         this.spouse = spouse;
     }
 
+    public Integer getId(){
+        return this.id;
+    }
+
     public String getName(){
         return this.name;
     }
@@ -52,22 +62,40 @@ public class Human {
         return this.deathDate;
     }
 
-    public String getFather(){
-        return this.father.name;
+    public Human getFather(){
+        return this.father;
     }
 
-    public String getMother(){
-        return this.mother.name;
+    public Human getMother(){
+        return this.mother;
     }
 
-    public String getSpouse(){
-        return this.spouse.name;
+    public Human getSpouse(){
+        return this.spouse;
     }
 
-    public List<String> getChildren(){
-        List<String> listchildren = new ArrayList<>();
-        for (Human tmp: children) {
-            listchildren.add(tmp.name);
+    public Gender getGender(){
+        return this.gender;
+    }
+
+    public Integer getAge(){
+        if (this.deathDate == null){
+            return getPeriod(birthDate, LocalDate.now());
+        }
+        else{
+            return getPeriod(birthDate, deathDate);
+        }
+    }
+
+    public Integer getPeriod(LocalDate birthDate, LocalDate deathDate){
+        Period age = Period.between(birthDate, deathDate);
+        return age.getYears();
+    }
+
+    public List<Human> getChildren(){
+        List<Human> listchildren = new ArrayList<>();
+        for (Human kid: children) {
+            listchildren.add(kid);
         }
         return listchildren;
     }
@@ -75,10 +103,18 @@ public class Human {
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.mm.dd");
         stringBuilder.append("Имя: "+ this.name + "\n" + "Дата рождения: " + this.birthDate + "\n");
-        stringBuilder.append("Дата смерти: " + this.deathDate + "\n" + "Отец: " + this.father.name + "\n");
-        stringBuilder.append("мать: " + mother.name + "\n");
+        stringBuilder.append("Дата смерти: " + this.deathDate + "\n");
+        stringBuilder.append("Возраст: " + this.getAge() + " лет \n");
+        if (this.father != null){
+            stringBuilder.append("Отец: " + this.father.name + "\n");
+        }
+        if (this.mother != null){
+            stringBuilder.append("мать: " + mother.name + "\n");
+        }
+        if (this.spouse != null){
+            stringBuilder.append("Супруг(а): " + spouse.name + "\n");
+        }
         for (Human tmp: children) {
             stringBuilder.append("Дети: " + tmp.name + "\n");
         }

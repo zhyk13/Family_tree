@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cde2f6b5-ae3d-415e-807a-63c6d605977a" name="Changes" comment="Класс Human">
+    <list default="true" id="cde2f6b5-ae3d-415e-807a-63c6d605977a" name="Changes" comment="Доделал первое ДЗ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FamilyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FamilyTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gender.java" afterDir="false" />
@@ -27,15 +27,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "zhyk13"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/zhyk13/Family_tree.git",
-    "accountId": "4f081ff8-bb76-41c2-af73-daff7aba18a0"
+    "accountId": "433789a5-e0a9-49fe-8acf-05c329b44b98"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2gW2I5OE7PbzBtyh3tyQ9BG8ZBx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -47,6 +53,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "F:/TMP1/Skan/1С-Разработчик/Программист разработчик/ООП/Семинар_1/Family_tree/src/Main.java"
   }
@@ -64,6 +71,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Класс Human" />
-    <option name="LAST_COMMIT_MESSAGE" value="Класс Human" />
+    <MESSAGE value="Доделал первое ДЗ" />
+    <option name="LAST_COMMIT_MESSAGE" value="Доделал первое ДЗ" />
   </component>
 </project>
